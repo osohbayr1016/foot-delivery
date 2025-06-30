@@ -31,5 +31,5 @@ server.use(OrderRouter);
 server.use(AdminRouter);
 
 server.listen(8000, () => {
-  console.log("http://localhost:8000");
+  console.log("https://foot-delivery-p31l.onrender.com");
 });
