@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import { UserRouter } from "./router/user.route";
 import { CategoryRouter } from "./router/category.route";
 import { FoodRouter } from "./router/food.route";
+import { OrderRouter } from "./router/order.route";
+import { AdminRouter } from "./router/admin.route";
 
 const server = express();
 server.use(cors());
@@ -25,6 +27,8 @@ dataBaseStart();
 server.use(UserRouter);
 server.use(CategoryRouter);
 server.use(FoodRouter);
+server.use(OrderRouter);
+server.use(AdminRouter);
 
 server.listen(8000, () => {
   console.log("http://localhost:8000");
