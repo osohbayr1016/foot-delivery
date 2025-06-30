@@ -1,6 +1,6 @@
 import { model, Schema } from "mongoose";
 
-enum UserRoleEnum {
+export enum UserRoleEnum {
   ADMIN = "ADMIN",
   USER = "USER",
 }
@@ -26,7 +26,12 @@ const Users = new Schema<User>({
   phoneNumber: { type: String, required: false },
   address: { type: String, required: false },
   isVerified: { type: Boolean, required: false },
-  role: { type: String, enum: ["ADMIN", "USER"], required: false },
+  role: {
+    type: String,
+    enum: ["ADMIN", "USER"],
+    required: false,
+    default: "USER",
+  },
 
   createdAt: { type: Date, default: Date.now, immutable: true },
   updatedAt: { type: Date, default: Date.now },
