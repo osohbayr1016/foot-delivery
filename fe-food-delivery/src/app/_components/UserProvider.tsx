@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
 
   const tokenChecker = async (token: string) => {
     try {
-      const response = await axios.post("http://localhost:8000/verify", {
+      const response = await axios.post("https://foot-delivery-p31l.onrender.com/verify", {
         token: token,
       });
       setUser({

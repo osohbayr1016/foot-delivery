@@ -27,7 +27,7 @@ export const ForgetEmail = ({ nextStep }: UserData) => {
     onSubmit: async (values) => {
       try {
         const response = await axios.post(
-          "http://localhost:8000/forgetPassword",
+          "https://foot-delivery-p31l.onrender.com/forgetPassword",
           {
             email: values.email,
           }

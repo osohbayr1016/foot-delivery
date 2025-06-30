@@ -79,7 +79,7 @@ export const CartSheet = () => {
     });
 
     await axios.post(
-      "http://localhost:8000/createOrder",
+      "https://foot-delivery-p31l.onrender.com/createOrder",
       {
         totalPrice: totalPrice + 5000,
         address: addressRef.current?.value,
@@ -127,7 +127,7 @@ export const CartSheet = () => {
         return;
       }
 
-      const { data } = await axios.get("http://localhost:8000/getOrders", {
+      const { data } = await axios.get("https://foot-delivery-p31l.onrender.com/getOrders", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

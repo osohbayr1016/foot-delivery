@@ -47,7 +47,7 @@ const PasswordSection = ({ prevStep, email }: PageProps) => {
     validationSchema: validationSchema,
     onSubmit: async (values) => {
       try {
-        const response = await axios.post("http://localhost:8000/signUp", {
+        const response = await axios.post("https://foot-delivery-p31l.onrender.com/signUp", {
           email: email,
           password: values.password,
         });

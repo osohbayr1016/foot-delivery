@@ -29,7 +29,7 @@ const LogInPage = () => {
     validationSchema: validationSchema,
     onSubmit: async (values) => {
       try {
-        const response = await axios.post("http://localhost:8000/logIn", {
+        const response = await axios.post("https://foot-delivery-p31l.onrender.com/logIn", {
           email: values.email,
           password: values.password,
         });
